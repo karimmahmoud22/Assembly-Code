@@ -1,0 +1,67 @@
+.MODEL SMALL
+.STACK 64
+.DATA
+
+
+
+
+STRING1 DB "ENDER THE First : $"  
+STRING2 DB "ENDER THE First : $"  
+
+
+NEWLINE DB 10,13,'$'
+
+INDATA LABEL BYTE
+SIZEe DB 16
+ACTUALSIZE DB 15
+INSS DB 16 DUP (?)
+
+
+INDATA2 LABEL BYTE
+SIZEe2 DB 16
+ACTUALSIZE2 DB 15
+INSS2 DB 16 DUP (?)
+
+
+.CODE
+MAIN PROC FAR
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    mov ah,0AH
+    mov dx,offset InDATA
+    int 21h
+    
+    mov ah, 9
+mov dx, offset NEWLINE
+int 21h
+
+mov ah, 9
+mov dx, offset NEWLINE
+int 21h
+    
+    mov ah,0AH
+    mov dx,offset InDATA2
+    int 21h
+    
+    MOV SI,OFFSET INDATA
+    
+    MOV DI, OFFSET INDATA2
+    
+    MOV CX,0
+    S1:
+       INC CX
+       INC SI
+       
+
+
+
+
+lll:hlt
+
+    
+    MAIN ENDP
+END MAIN
+
+
+  

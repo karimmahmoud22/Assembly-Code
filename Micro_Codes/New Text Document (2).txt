@@ -1,0 +1,15 @@
+
+         
+         
+    mov  dl, 73   ;Column
+    mov  dh, 2   ;Row
+    mov  bh, 0    ;Display page
+    mov  ah, 02h  ;SetCursorPosition
+    int  10h
+    
+    MOV AH,9
+    MOV BH, 0 ;Color is red
+    MOV Al, 88  ;Color is red
+    MOV CX,1
+    MOV BL,009H
+    INT 10H

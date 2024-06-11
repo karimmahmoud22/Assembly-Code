@@ -1,0 +1,45 @@
+.MODEL SMALL
+.STACK 64
+.DATA
+
+
+STRING1 DB "PLEASE, ENTER YOUR NAME :  $"  
+STRING2 DB "INTIAL POINTS :  $"  
+STRING3 DB "PRESS ENTER KEY TO CONTINUE   $"  
+
+
+NEWLINE DB 10,13,'$'
+
+
+INDATA LABEL BYTE
+SIZEe DB 16
+ACTUALSIZE DB 15
+INSS DB ,16 DUP (?)
+
+
+Msg1 DB   "Start Chat press F1$"
+Msg2 DB   "Start Game press F2$"
+Msg3 DB   "Exit press Esc$"
+
+
+
+.CODE
+MAIN PROC FAR
+    MOV AX,@DATA
+    MOV DS,AX
+    
+    
+    
+
+
+
+
+
+lll:hlt
+
+    
+    MAIN ENDP
+END MAIN
+
+
+  

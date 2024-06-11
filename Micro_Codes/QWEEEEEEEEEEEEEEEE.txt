@@ -1,0 +1,214 @@
+
+DRAW_NUMBERS_IN_REGISTERS_AX_BX_CX_DX_PLAYER_2 MACRO
+LOCAL AGAIN
+
+MOV CL,4
+MOV X_1_CHAR,60
+MOV Y_1_CHAR,14
+
+MOV X_2_CHAR,61
+MOV Y_2_CHAR,14
+
+MOV X_3_CHAR,62
+MOV Y_3_CHAR,14
+
+MOV X_4_CHAR,63
+MOV Y_4_CHAR,14
+
+MOV SI,OFFSET AX_REG2 
+MOV DX,[SI]
+MOV AX,0000
+
+
+PRINT3:
+     ;;;;;;;;;;;;;;;;;;;;
+
+mov bX,1000
+div bX
+mov BX,aX
+add BX,30h
+PUSH DX
+    MOV AH,2
+    MOV DL,X_1_CHAR
+    MOV DH,Y_1_CHAR
+    MOV AL,12H
+    INT 10H
+
+MOV DX,BX
+mov ah,02h
+int 21h
+POP DX
+
+
+MOV AX,0000
+mov bX,100
+div bX
+mov BX,aX
+add BX,30h
+PUSH DX
+    MOV AH,2
+    MOV DL,X_2_CHAR
+    MOV DH,Y_2_CHAR
+    MOV AL,12H
+    INT 10H
+MOV DX,BX
+mov ah,02h
+int 21h
+POP DX
+
+
+MOV AX,0000
+mov bX,10
+div bX
+mov BX,aX
+add BX,30h
+PUSH DX
+    MOV AH,2
+    MOV DL,X_3_CHAR
+    MOV DH,Y_3_CHAR
+    MOV AL,12H
+    INT 10H
+MOV DX,BX
+mov ah,02h
+int 21h
+POP DX
+
+
+mov BX,DX
+add BX,30h
+
+    MOV AH,2
+    MOV DL,X_4_CHAR
+    MOV DH,Y_4_CHAR
+    MOV AL,12H
+    INT 10H
+
+MOV DX,BX
+mov ah,02h
+int 21h
+     
+     ;;;;;;;;;;;;;;;;;;;
+     ADD Y_1_CHAR,3
+     ADD Y_2_CHAR,3
+     ADD Y_3_CHAR,3
+     ADD Y_4_CHAR,3
+     
+     INC SI
+     INC SI
+     MOV DX,[SI]
+     MOV AX,0000
+     DEC CL
+     JZ STOPASD
+     JMP PRINT3
+     
+   STOPASD:
+     
+ENDM DRAW_NUMBERS_IN_REGISTERS_AX_BX_CX_DX_PLAYER_2
+
+
+
+DRAW_NUMBERS_IN_REGISTERS_SI_DI_SP_BP_PLAYER_2 MACRO
+LOCAL AGAIN
+
+MOV CL,4
+MOV X_1_CHAR,71
+MOV Y_1_CHAR,14
+
+MOV X_2_CHAR,72
+MOV Y_2_CHAR,14
+
+MOV X_3_CHAR,73
+MOV Y_3_CHAR,14
+
+MOV X_4_CHAR,74
+MOV Y_4_CHAR,14
+
+MOV SI,OFFSET SI_REG2 
+MOV DX,[SI]
+MOV AX,0000
+
+
+QWE:
+     ;;;;;;;;;;;;;;;;;;;;
+
+mov bX,1000
+div bX
+mov BX,aX
+add BX,30h
+PUSH DX
+    MOV AH,2
+    MOV DL,X_1_CHAR
+    MOV DH,Y_1_CHAR
+    MOV AL,12H
+    INT 10H
+
+MOV DX,BX
+mov ah,02h
+int 21h
+POP DX
+
+
+MOV AX,0000
+mov bX,100
+div bX
+mov BX,aX
+add BX,30h
+PUSH DX
+    MOV AH,2
+    MOV DL,X_2_CHAR
+    MOV DH,Y_2_CHAR
+    MOV AL,12H
+    INT 10H
+MOV DX,BX
+mov ah,02h
+int 21h
+POP DX
+
+MOV AX,0000
+mov bX,10
+div bX
+mov BX,aX
+add BX,30h
+PUSH DX
+    MOV AH,2
+    MOV DL,X_3_CHAR
+    MOV DH,Y_3_CHAR
+    MOV AL,12H
+    INT 10H
+MOV DX,BX
+mov ah,02h
+int 21h
+POP DX
+
+
+mov BX,DX
+add BX,30h
+
+    MOV AH,2
+    MOV DL,X_4_CHAR
+    MOV DH,Y_4_CHAR
+    MOV AL,12H
+    INT 10H
+
+MOV DX,BX
+mov ah,02h
+int 21h
+     
+     ;;;;;;;;;;;;;;;;;;;
+     ADD Y_1_CHAR,3
+     ADD Y_2_CHAR,3
+     ADD Y_3_CHAR,3
+     ADD Y_4_CHAR,3
+     
+     INC SI
+     INC SI
+     MOV DX,[SI]
+     MOV AX,0000
+     DEC CL
+     JZ STOPQ
+     JMP QWE
+        
+   STOPQ:
+           NOP
+     
+ENDM DRAW_NUMBERS_IN_REGISTERS_SI_DI_SP_BP_PLAYER_2

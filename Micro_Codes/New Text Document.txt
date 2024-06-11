@@ -1,0 +1,376 @@
+.MODEL SMALL
+.STACK 64
+.DATA
+
+NEWLINE DB 10,13,'$'
+
+.CODE
+MAIN PROC FAR
+    MOV AX,@DATA
+    MOV DS,AX 
+       
+    MOV AH,0  
+    MOV BH,3   ;;;;;;;;;;;;;;;;PPPPPAAAAAGGGGGEEEE 333333333333333
+    MOV AL,12H
+    INT 10H 
+    
+    
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    
+                   
+    MOV CX,350
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK43:
+         INT 10H
+         INC CX
+         CMP CX,431
+         JNZ BACK43  
+    
+    
+    MOV CX,350
+    MOV DX,245
+    MOV AL,14
+    MOV AH,0CH
+    BACK44:
+         INT 10H
+         INC CX
+         CMP CX,431
+         JNZ BACK44     
+    
+    
+    MOV CX,450
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK45:
+         INT 10H
+         INC CX
+         CMP CX,531
+         JNZ BACK45  
+    
+    
+    MOV CX,450
+    MOV DX,245
+    MOV AL,14
+    MOV AH,0CH
+    BACK46:
+         INT 10H
+         INC CX
+         CMP CX,531
+         JNZ BACK46    
+    
+    MOV CX,550
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK47:
+         INT 10H
+         INC CX
+         CMP CX,631
+         JNZ BACK47  
+    
+    
+    MOV CX,550
+    MOV DX,245
+    MOV AL,14
+    MOV AH,0CH
+    BACK48:
+         INT 10H
+         INC CX
+         CMP CX,631
+         JNZ BACK48
+         
+          
+         
+    MOV CX,350
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK49:
+         INT 10H
+         INC DX
+         CMP DX,245
+         JNZ BACK49          
+         
+    MOV CX,450
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK50:
+         INT 10H
+         INC DX
+         CMP DX,245
+         JNZ BACK50 
+
+    MOV CX,550
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK51:
+         INT 10H
+         INC DX
+         CMP DX,245
+         JNZ BACK51 
+    
+    
+    
+    MOV CX,430
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK52:
+         INT 10H
+         INC DX
+         CMP DX,245
+         JNZ BACK52         
+         
+    MOV CX,530
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK53:
+         INT 10H
+         INC DX
+         CMP DX,245
+         JNZ BACK53 
+
+    MOV CX,630
+    MOV DX,220
+    MOV AL,14
+    MOV AH,0CH
+    BACK54:
+         INT 10H
+         INC DX
+         CMP DX,245
+         JNZ BACK54
+
+                           
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    
+                   
+    MOV CX,350
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK55:
+         INT 10H
+         INC CX
+         CMP CX,431
+         JNZ BACK55  
+    
+    
+    MOV CX,350
+    MOV DX,285
+    MOV AL,14
+    MOV AH,0CH
+    BACK56:
+         INT 10H
+         INC CX
+         CMP CX,431
+         JNZ BACK56     
+    
+    
+    MOV CX,450
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK57:
+         INT 10H
+         INC CX
+         CMP CX,531
+         JNZ BACK57  
+    
+    
+    MOV CX,450
+    MOV DX,285
+    MOV AL,14
+    MOV AH,0CH
+    BACK58:
+         INT 10H
+         INC CX
+         CMP CX,531
+         JNZ BACK58    
+    
+    MOV CX,550
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK59:
+         INT 10H
+         INC CX
+         CMP CX,631
+         JNZ BACK59  
+    
+    
+    MOV CX,550
+    MOV DX,285
+    MOV AL,14
+    MOV AH,0CH
+    BACK60:
+         INT 10H
+         INC CX
+         CMP CX,631
+         JNZ BACK60
+         
+          
+         
+    MOV CX,350
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK61:
+         INT 10H
+         INC DX
+         CMP DX,285
+         JNZ BACK61          
+         
+    MOV CX,450
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK62:
+         INT 10H
+         INC DX
+         CMP DX,285
+         JNZ BACK62 
+
+    MOV CX,550
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK63:
+         INT 10H
+         INC DX
+         CMP DX,285
+         JNZ BACK63 
+    
+    
+    
+    MOV CX,430
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK64:
+         INT 10H
+         INC DX
+         CMP DX,285
+         JNZ BACK64          
+         
+    MOV CX,530
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK65:
+         INT 10H
+         INC DX
+         CMP DX,285
+         JNZ BACK65 
+
+    MOV CX,630
+    MOV DX,260
+    MOV AL,14
+    MOV AH,0CH
+    BACK66:
+         INT 10H
+         INC DX
+         CMP DX,285
+         JNZ BACK66
+
+                           
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    
+                   
+    MOV CX,400
+    MOV DX,300
+    MOV AL,14
+    MOV AH,0CH
+    BACK67:
+         INT 10H
+         INC CX
+         CMP CX,481
+         JNZ BACK67  
+    
+    
+    MOV CX,400
+    MOV DX,325
+    MOV AL,14
+    MOV AH,0CH
+    BACK68:
+         INT 10H
+         INC CX
+         CMP CX,481
+         JNZ BACK68     
+    
+    
+    
+    MOV CX,500
+    MOV DX,300
+    MOV AL,14
+    MOV AH,0CH
+    BACK69:
+         INT 10H
+         INC CX
+         CMP CX,581
+         JNZ BACK69   
+    
+    MOV CX,500
+    MOV DX,325
+    MOV AL,14
+    MOV AH,0CH
+    BACK70:
+         INT 10H
+         INC CX
+         CMP CX,581
+         JNZ BACK70  
+         
+          
+         
+    MOV CX,400
+    MOV DX,300
+    MOV AL,14
+    MOV AH,0CH
+    BACK71:
+         INT 10H
+         INC DX
+         CMP DX,325
+         JNZ BACK71          
+         
+    MOV CX,480
+    MOV DX,300
+    MOV AL,14
+    MOV AH,0CH
+    BACK72:
+         INT 10H
+         INC DX
+         CMP DX,325
+         JNZ BACK72 
+
+    MOV CX,500
+    MOV DX,300
+    MOV AL,14
+    MOV AH,0CH
+    BACK73:
+         INT 10H
+         INC DX
+         CMP DX,325
+         JNZ BACK73 
+    
+    
+    
+    MOV CX,580
+    MOV DX,300
+    MOV AL,14
+    MOV AH,0CH
+    BACK74:
+         INT 10H
+         INC DX
+         CMP DX,325
+         JNZ BACK74          
+
+     LL: 
+       HLT
+            
+    MAIN ENDP
+END MAIN
